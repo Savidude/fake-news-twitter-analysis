@@ -108,3 +108,10 @@ def print_distinct_users():
 if __name__ == '__main__':
     # classify_and_write() # uncomment and run to re-create separate files
     print_distinct_users()
+
+"""
+Result:
+Distinct real news users:  2929
+Distinct fake news users:  389
+Distinct real and fake news users:  208
+"""
