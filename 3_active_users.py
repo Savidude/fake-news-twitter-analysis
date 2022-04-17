@@ -2,10 +2,7 @@ import pandas as pd
 
 def get_news_data():
     real_news = pd.read_csv("data/derived/real_news.csv")
-    real_news['created_at'] = pd.to_datetime(real_news['created_at'])
-
     fake_news = pd.read_csv("data/derived/fake_news.csv")
-    fake_news['created_at'] = pd.to_datetime(fake_news['created_at'])
 
     return real_news, fake_news
 
