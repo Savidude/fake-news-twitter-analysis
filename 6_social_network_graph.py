@@ -52,8 +52,8 @@ def draw_graph(all_mentions):
 if __name__ == '__main__':
     real_news_data, fake_news_data = get_news_data()
 
-    real_news_mentions = get_mentions(real_news_data)
-    draw_graph(real_news_mentions)
+    # real_news_mentions = get_mentions(real_news_data)
+    # # draw_graph(real_news_mentions)
 
     fake_news_mentions = get_mentions(fake_news_data)
     draw_graph(fake_news_mentions)
