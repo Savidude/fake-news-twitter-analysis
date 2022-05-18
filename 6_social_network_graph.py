@@ -46,14 +46,19 @@ def draw_graph(all_mentions):
             if mention != user:
                 G.add_edge(user, mention)
 
-    nx.draw_networkx(G)
+    # nx.draw_networkx(G)
+    # plt.show()
+
+    pos = nx.kamada_kawai_layout(G)
+    plt.figure(3, figsize=(20, 20))
+    nx.draw(G, pos=pos)
     plt.show()
 
 if __name__ == '__main__':
     real_news_data, fake_news_data = get_news_data()
 
     # real_news_mentions = get_mentions(real_news_data)
-    # # draw_graph(real_news_mentions)
+    # draw_graph(real_news_mentions)
 
     fake_news_mentions = get_mentions(fake_news_data)
     draw_graph(fake_news_mentions)
